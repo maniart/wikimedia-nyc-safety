@@ -7,7 +7,7 @@ const app = express();
 const nodemailer = require('nodemailer');
 
 if (process.env.NODE_ENV === 'development') {
-  console.log('-> development environment. using `.env` file.');
+  console.log('-> Development environment. Using `.env` file.');
   require('dotenv').config();
 } 
 
@@ -19,6 +19,7 @@ const transport = nodemailer.createTransport({
 });
 
 app.use(bodyParser.urlencoded({extended: false})); 
+app.use(express.static('public'))
 
 app.post('/message', function (request, response) {
   console.log(request.body); 
@@ -26,7 +27,7 @@ app.post('/message', function (request, response) {
   response.send(`
     <Response>
       <Message>
-        Thank you for your report. The organizer have been notified, and they will take appropriate actions to ensure a safe experience for everyone.
+        Thank you for your report. The organizers have been notified, and they will take appropriate actions to ensure a safe experience for everyone.
       </Message>
     </Response>`
   );

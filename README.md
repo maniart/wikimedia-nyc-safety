@@ -38,7 +38,7 @@ Please note that in development mode, you will not be able to send receive SMS c
 - Open your browser and navigate to `http://localhost:3000`
 
 ### Deployment
-This app is deployed using [Heroku](https://heroku.com).
+This app is deployed using [Heroku](https://heroku.com). As of the time of writing this document, we are on the [free Heroku tier](https://www.heroku.com/pricing).  
 
 - Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - In production environment, environment variables should be set from Heroku, and the `.env` file is ignored. However, the Heroku environment variables should mirror exactly the same keys and appropriate values as the `.env` file. [Here's how](https://devcenter.heroku.com/articles/config-vars) to set environment variables for Heroku. 

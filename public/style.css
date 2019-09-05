@@ -86,3 +86,8 @@ hr {
 	padding: 0.4em 0;
 
 }
+
+a, a:hover, a:visited {
+	color: black;
+	text-decoration: underline;
+}
